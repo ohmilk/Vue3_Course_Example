@@ -83,7 +83,7 @@
               i++;
               if (i === ImageArr.length) {
                 imgArr.arr = ImageArr
-                isOnload = false;
+                isOnload.value = false;
               }
 
             }
@@ -93,7 +93,6 @@
         onMounted(() => {
           axios.get('https://vue-lessons-api.vercel.app/photo/list').then((res) => {
             imageLoad(res.data)
-            imgArr.arr = res.data
           });
         });
 
